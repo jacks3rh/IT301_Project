@@ -13,8 +13,8 @@ h1, h2, h3 {
 
 .logo {
   display: block;
-  width: 70%;
-  max-width: 300px;
+  width: 100%;
+  max-width: 100px;
   height: auto;
   margin: 20px auto;
 }
