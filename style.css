@@ -1,0 +1,171 @@
+/* ==========================================
+   style.css - one stylesheet for all 5 pages
+   ========================================== */
+
+/* ---------- Shared styles (every page) ---------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;   /* font 1: body text */
+  line-height: 1.6;
+  background-color: #f4f6f9;
+  color: #222222;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;      /* font 2: headings */
+  color: #1b2a49;
+}
+
+/* Header: position sticky keeps it at the top while scrolling */
+header {
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  background-color: #1b2a49;
+  color: #ffffff;
+}
+
+header p {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+}
+
+/* Navigation bar */
+nav ul {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 8px 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  background-color: #b71c1c;
+}
+
+/* Position relative: the link moves up 2px when hovered */
+nav a:hover {
+  position: relative;
+  top: -2px;
+}
+
+/* Main content area */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* White content box */
+.box {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+a {
+  color: #b71c1c;
+}
+
+footer {
+  padding: 20px;
+  background-color: #1b2a49;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer a {
+  color: #f2b705;
+}
+
+/* ---------- Rules page (rules.html) ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  text-align: left;
+}
+
+th {
+  background-color: #1b2a49;
+  color: #ffffff;
+}
+
+/* ---------- Events page (events.html) ---------- */
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.events .box {
+  flex: 1 1 280px;
+  border-top: 5px solid #b71c1c;
+}
+
+/* ---------- Scoring page (scoring.html) ---------- */
+.scores {
+  display: flex;
+  gap: 20px;
+}
+
+.scores .box {
+  flex: 1;
+  border-left: 5px solid #f2b705;
+}
+
+/* ---------- Get Involved page (join.html) ---------- */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #b71c1c;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ==========================================
+   MEDIA QUERY - small screens (700px and below)
+   ========================================== */
+@media (max-width: 700px) {
+  /* nav links stack one per row */
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* header stops sticking so it doesn't cover the page */
+  header {
+    position: static;
+  }
+
+  /* score boxes stack */
+  .scores {
+    flex-direction: column;
+  }
+}
